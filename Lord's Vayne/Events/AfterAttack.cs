@@ -176,32 +176,9 @@ namespace Lord_s_Vayne.Events
                 }              
             }
         }
-
-
-        public static Vector3 Normalize(Vector3 A)
-        {
-            double distance = Math.Sqrt(A.X * A.X + A.Y * A.Y);
-            return new Vector3(new Vector2((float)(A.X / distance)), (float)(A.Y / distance));
-
-        }
+        
     }
 }
 
-          /* if (Program.Q.IsReady())
-                {
-                switch (Program.qmenu.Item("QMode").GetValue<StringList>().SelectedIndex)
-                {
-                    case 0:
-                        {
-                            QLogic.Gosu.Run();
-                        }
-                        break;
-                    case 1:
-                        {
-                            QLogic.Cursor.Run();
-                        }
-                        break;
-                }
-            }
-            */
+       
  

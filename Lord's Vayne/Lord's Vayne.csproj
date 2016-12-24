@@ -112,7 +112,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="QLogic\Burst.cs" />
-    <Compile Include="QLogic\Cursor.cs" />
     <Compile Include="QLogic\Gosu.cs" />
     <Compile Include="QLogic\QLogic.cs" />
   </ItemGroup>
