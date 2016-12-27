@@ -16,7 +16,7 @@ namespace Lord_s_Template
     {
         static void Main(string[] args)
         {
-            CustomEvents.Game.OnGameLoad += Game_OnGameUpdate;
+            CustomEvents.Game.OnGameLoad += Game_OnLoad;
         }
 
         public static Obj_AI_Hero p;
@@ -32,7 +32,7 @@ namespace Lord_s_Template
         public static Orbwalking.Orbwalker orbwalker;
 
 
-        public static void Game_OnGameUpdate(EventArgs args)
+        public static void Game_OnLoad(EventArgs args)
 
         {
             if (Player.ChampionName != "")
