@@ -198,6 +198,10 @@ namespace Lord_s_Vayne.Events
                         QLogic.Hiki.SafePositionQ(htarget);
                         Game.SendEmote(Emote.Dance);
                     }
+                    if (value == 8)
+                    {
+                         
+                    }
                 }
              }
           }

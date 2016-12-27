@@ -97,6 +97,11 @@ namespace Lord_s_Vayne.Events
                             Condemn.PRADALEAGACY.Run();
                         }
                         break;
+                    case 12:
+                        {
+                            Condemn.Lords2.Run();
+                        }
+                        break;
                 }
             }
         }
