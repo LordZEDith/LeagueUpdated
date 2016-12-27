@@ -9,6 +9,9 @@ namespace Lord_s_Vayne.Events
 {
     class AfterAttack
     {
+        private static Obj_AI_Hero enemy;
+
+        // Obj_AI_Hero enemy;
 
         public static void Orbwalking_AfterAttack(AttackableUnit unit, AttackableUnit target)
         {
@@ -112,7 +115,7 @@ namespace Lord_s_Vayne.Events
 
                 if (value == 2)
                 {
-                    if(FastQ)
+                    if (FastQ)
                     {
                         Program.Q.Cast(Game.CursorPos);
                         Game.SendEmote(Emote.Dance);
@@ -172,13 +175,33 @@ namespace Lord_s_Vayne.Events
 
                 if (value == 6)
                 {
-                    QLogic.Bursts.Burst();
-                }              
-            }
-        }
-        
-    }
-}
+                    if (!FastQ)
+                    {
+                        QLogic.Bursts.Burst();
+                    }
+                    if (FastQ)
+                    {
+                        QLogic.Bursts.Burst();
+                        Game.SendEmote(Emote.Dance);
+                    }
+                }
+                if (value == 7)
+                {
+                    if (!FastQ)
+                    {
+                        QLogic.Hiki.SafePositionQ(enemy);
+                    }
+                    if (FastQ)
+                    {
+                        QLogic.Hiki.SafePositionQ(enemy);
+                        Game.SendEmote(Emote.Dance);
+                    }
+                }
+             }
+          }
+      }
+  }
+
 
        
  

@@ -113,6 +113,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="QLogic\Burst.cs" />
     <Compile Include="QLogic\Gosu.cs" />
+    <Compile Include="QLogic\Hiki.cs" />
     <Compile Include="QLogic\QLogic.cs" />
   </ItemGroup>
   <ItemGroup>
