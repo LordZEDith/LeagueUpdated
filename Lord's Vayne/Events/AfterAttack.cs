@@ -93,6 +93,7 @@ namespace Lord_s_Vayne.Events
             {
                 var value = Program.qmenu.Item("QMode", true).GetValue<StringList>().SelectedIndex;
                 var FastQ = Program.qmenu.Item("FastQ").GetValue<bool>();
+                var htarget = TargetSelector.GetTarget(Program.E.Range, TargetSelector.DamageType.Physical);
 
                 if (value == 0)
                 {
@@ -187,13 +188,14 @@ namespace Lord_s_Vayne.Events
                 }
                 if (value == 7)
                 {
+                   
                     if (!FastQ)
                     {
-                        QLogic.Hiki.SafePositionQ(enemy);
+                        QLogic.Hiki.SafePositionQ(htarget);
                     }
                     if (FastQ)
                     {
-                        QLogic.Hiki.SafePositionQ(enemy);
+                        QLogic.Hiki.SafePositionQ(htarget);
                         Game.SendEmote(Emote.Dance);
                     }
                 }
