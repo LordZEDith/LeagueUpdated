@@ -106,14 +106,6 @@ namespace Lord_s_Vayne
                 Program.qmenu.AddItem(new MenuItem("FastQ", "Fast Q").SetValue(true).SetValue(true).SetTooltip("Q Animation Cancelation"));
                 Program.qmenu.AddItem(new MenuItem("UseQC", "Use Q Combo").SetValue(true));
                 Program.qmenu.AddItem(new MenuItem("QMode", "Use Q Mode:", true).SetValue(new StringList(new[] { "Gosu", "Side", "Cursor", "SmartQ", "SafeQ", "AggroQ", "Burst", "Hiki" })));
-            /*if (Program.qmenu.Item("QMode", true).GetValue<StringList>().SelectedIndex == 8)
-            {
-                Program.qmenu.AddItem(new MenuItem("QOrderBy", "Q to position").SetValue(new StringList(new[] { "CLOSETOMOUSE", "CLOSETOTARGET" })));
-            }*/
-            if (Program.qmenu.Item("QMode", true).GetValue<StringList>().SelectedIndex == 8)
-            {
-                Program.qmenu.AddItem(new MenuItem("smartq", "Try to QE when possible").SetValue(true));
-            }
                 Program.qmenu.AddItem(new MenuItem("hq", "Use Q Harass").SetValue(true));
                 Program.qmenu.AddItem(new MenuItem("restrictq", "Restrict Q usage?").SetValue(true));
                 Program.qmenu.AddItem(new MenuItem("UseQJ", "Use Q Farm").SetValue(true));                           
@@ -196,9 +188,7 @@ namespace Lord_s_Vayne
                 //  "<font color='#f2f21d'>Buy me cigars </font> <font color='#ff1900'>ssssssssssmith@hotmail.com</font> (10) S");
                 Program.menu.AddToMainMenu();
             }
-
-        
-    }
+        }
         #endregion
     }
 

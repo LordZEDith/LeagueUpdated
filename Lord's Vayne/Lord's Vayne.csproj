@@ -82,7 +82,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Condemn\Lords2.cs" />
     <Compile Include="Misc\CheckTarget.cs" />
     <Compile Include="Condemn\Flowers.cs" />
     <Compile Include="Condemn\Gosu.cs" />
@@ -115,10 +114,7 @@
     <Compile Include="QLogic\Burst.cs" />
     <Compile Include="QLogic\Gosu.cs" />
     <Compile Include="QLogic\Hiki.cs" />
-    <Compile Include="QLogic\Lords.cs" />
-    <Compile Include="QLogic\Prada.cs" />
     <Compile Include="QLogic\QLogic.cs" />
-    <Compile Include="QLogic\VHR.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
