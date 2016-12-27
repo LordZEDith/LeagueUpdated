@@ -1,0 +1,15 @@
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\Lord's Vayne.exe.config
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\Lord's Vayne.exe
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\Lord's Vayne.pdb
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\clipper_library.dll
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\LeagueSharp.Common.dll
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\LeagueSharp.dll
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\Newtonsoft.Json.dll
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\SharpDX.Direct3D9.dll
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\SharpDX.dll
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\LeagueSharp.Data.dll
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\clipper_library.pdb
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\LeagueSharp.Common.pdb
+C:\Users\docum\Documents\Scripts\Lord's Vayne\bin\Release\LeagueSharp.Data.pdb
+C:\Users\docum\Documents\Scripts\Lord's Vayne\obj\Release\Lord's Vayne.exe
+C:\Users\docum\Documents\Scripts\Lord's Vayne\obj\Release\Lord's Vayne.pdb

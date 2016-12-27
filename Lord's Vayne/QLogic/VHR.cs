@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Lord_s_Vayne.QLogic
+/*namespace Lord_s_Vayne.QLogic
 {
     class VHR
     {
@@ -36,7 +36,7 @@ namespace Lord_s_Vayne.QLogic
 
          }
     }
-}
+}*/
 
 
                                
