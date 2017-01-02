@@ -34,20 +34,18 @@ namespace GodJungleTracker.Classes
                 {
                     // Order: Blue
                     new Camp("Blue",
-                        100, 300, new Vector3(3872f, 7900f, 51f),
+                        95, 300, new Vector3(3872f, 7900f, 51f),
                         new List<Mob>(
                             new[]
                             {
-                                new Mob("SRU_Blue1.1.1"), 
-                               // new Mob("SRU_BlueMini1.1.2", true),
-                              //  new Mob("SRU_BlueMini21.1.3", true)
+                                new Mob("SRU_Blue1.1.1")
                             }), 
                         Utility.Map.MapType.SummonersRift,
                         GameObjectTeam.Order,
                         Color.Cyan, new Timers(new Vector2(0,0),new Vector2(0,0)), true),
                     //Order: Wolves
                     new Camp("Wolves",
-                        100, 100, new Vector3(3825f, 6491f, 52f),
+                        115, 150, new Vector3(3825f, 6491f, 52f),
                         new List<Mob>(
                             new[]
                             {
@@ -60,56 +58,55 @@ namespace GodJungleTracker.Classes
                         Color.White, new Timers(new Vector2(0,0),new Vector2(0,0))),
                     //Order: Raptor
                     new Camp("Raptor",
-                        100, 100, new Vector3(6954f, 5458f, 53f),
+                        115, 150, new Vector3(6954f, 5458f, 53f),
                         new List<Mob>(
                             new[]
                             {
                                 new Mob("SRU_Razorbeak3.1.1", true), 
                                 new Mob("SRU_RazorbeakMini3.1.2"),
                                 new Mob("SRU_RazorbeakMini3.1.3"), 
-                                new Mob("SRU_RazorbeakMini3.1.4")
+                                new Mob("SRU_RazorbeakMini3.1.4"),
+                                new Mob("SRU_RazorbeakMini3.1.5"),
+                                new Mob("SRU_RazorbeakMini3.1.6"),
                             }), 
                         Utility.Map.MapType.SummonersRift, 
                         GameObjectTeam.Order,
                         Color.Salmon, new Timers(new Vector2(0,0),new Vector2(0,0)), true),
                     //Order: Red
                     new Camp("Red",
-                        100, 300, new Vector3(7862f, 4111f, 54f),
+                        95, 300, new Vector3(7862f, 4111f, 54f),
                         new List<Mob>(
                             new[]
                             { 
-                                new Mob("SRU_Red4.1.1"), 
-                                //new Mob("SRU_RedMini4.1.2", true), 
-                               // new Mob("SRU_RedMini4.1.3", true) 
+                                new Mob("SRU_Red4.1.1")
                             }), 
                         Utility.Map.MapType.SummonersRift, 
                         GameObjectTeam.Order,
                         Color.Red, new Timers(new Vector2(0,0),new Vector2(0,0)), true),
                         
-                    //Order: 
-                    
+                    //Order: Krug
                     new Camp("Krug",
-                        100, 100, new Vector3(8381f, 2711f, 51f),
+                        110, 150, new Vector3(8381f, 2711f, 51f),
                         new List<Mob>(
                             new[] 
                             { 
                                 new Mob("SRU_Krug5.1.1"), 
-                                new Mob("SRU_KrugMini5.1.1"),
                                 new Mob("SRU_KrugMini5.1.2"),
                                 new Mob("SRU_KrugMini5.1.3"),
                                 new Mob("SRU_KrugMini5.1.4"),
-                                new Mob("SRU_KrugMini5.1.5"),
-                                new Mob("SRU_KrugMini5.1.6"),
-                                new Mob("SRU_KrugMini5.1.7"),
-                                new Mob("SRU_KrugMini5.1.8"),
-                                new Mob("SRU_KrugMini5.1.9")
+                                new Mob("SRU_KrugMiniMini5.1.5"),
+                                new Mob("SRU_KrugMiniMini5.1.6"),
+                                new Mob("SRU_KrugMiniMini5.1.7"),
+                                new Mob("SRU_KrugMiniMini5.1.8"),
+                                new Mob("SRU_KrugMiniMini5.1.9"),
+                                new Mob("SRU_KrugMiniMini5.1.10")
                             }), 
                         Utility.Map.MapType.SummonersRift, 
                         GameObjectTeam.Order,
                         Color.White, new Timers(new Vector2(0,0),new Vector2(0,0))),
                     //Order: Gromp
                     new Camp("Gromp",
-                        115, 100, new Vector3(2091f, 8428f, 52f),
+                        110, 150, new Vector3(2091f, 8428f, 52f),
                         new List<Mob>(
                             new[] 
                             { 
@@ -120,20 +117,18 @@ namespace GodJungleTracker.Classes
                         Color.Green, new Timers(new Vector2(0,0),new Vector2(0,0)), true),
                     //Chaos: Blue
                     new Camp("Blue",
-                        100, 300, new Vector3(10930f, 6992f, 52f),
+                        95, 300, new Vector3(10930f, 6992f, 52f),
                         new List<Mob>(
                             new[]
                             {
-                                new Mob("SRU_Blue7.1.1"), 
-                                //new Mob("SRU_BlueMini7.1.2", true),
-                               // new Mob("SRU_BlueMini27.1.3", true)
+                                new Mob("SRU_Blue7.1.1")
                             }), 
                         Utility.Map.MapType.SummonersRift,
                         GameObjectTeam.Chaos,
                         Color.Cyan, new Timers(new Vector2(0,0),new Vector2(0,0)), true),
                     //Chaos: Wolves
                     new Camp("Wolves",
-                        100, 100, new Vector3(10957f, 8350f, 62f),
+                        110, 150, new Vector3(10957f, 8350f, 62f),
                         new List<Mob>(
                             new[]
                             {
@@ -146,54 +141,54 @@ namespace GodJungleTracker.Classes
                         Color.White, new Timers(new Vector2(0,0),new Vector2(0,0))),
                     //Chaos: Raptor
                     new Camp("Raptor",
-                        100, 100, new Vector3(7857f, 9471f, 52f),
+                        110, 150, new Vector3(7857f, 9471f, 52f),
                         new List<Mob>(
                             new[]
                             {
-                                new Mob("SRU_Razorbeak9.1.1", true), 
+                                new Mob("SRU_Razorbeak9.1.1", true),
                                 new Mob("SRU_RazorbeakMini9.1.2"),
-                                new Mob("SRU_RazorbeakMini9.1.3"), 
-                                new Mob("SRU_RazorbeakMini9.1.4")
+                                new Mob("SRU_RazorbeakMini9.1.3"),
+                                new Mob("SRU_RazorbeakMini9.1.4"),
+                                new Mob("SRU_RazorbeakMini9.1.5"),
+                                new Mob("SRU_RazorbeakMini9.1.6"),
                             }), 
                         Utility.Map.MapType.SummonersRift, 
                         GameObjectTeam.Chaos,
                         Color.Salmon, new Timers(new Vector2(0,0),new Vector2(0,0)), true),
                     //Chaos: Red
                     new Camp("Red",
-                        100, 300, new Vector3(7017f, 10775f, 56f),
+                        95, 300, new Vector3(7017f, 10775f, 56f),
                         new List<Mob>(
                             new[]
                             {
-                                new Mob("SRU_Red10.1.1"), 
-                                //new Mob("SRU_RedMini10.1.2", true), 
-                                //new Mob("SRU_RedMini10.1.3", true)
+                                new Mob("SRU_Red10.1.1")
                             }), 
                         Utility.Map.MapType.SummonersRift, 
                         GameObjectTeam.Chaos,
                         Color.Red, new Timers(new Vector2(0,0),new Vector2(0,0)), true),
                     //Chaos: Krug
                     new Camp("Krug",
-                        100, 100, new Vector3(6449f, 12117f, 56f),
+                        110, 150, new Vector3(6449f, 12117f, 56f),
                         new List<Mob>(
                             new[] 
-                            { 
+                            {
                                 new Mob("SRU_Krug11.1.1"),
-                                new Mob("SRU_KrugMini11.1.1"),
                                 new Mob("SRU_KrugMini11.1.2"),
                                 new Mob("SRU_KrugMini11.1.3"),
                                 new Mob("SRU_KrugMini11.1.4"),
-                                new Mob("SRU_KrugMini11.1.5"),
-                                new Mob("SRU_KrugMini11.1.6"),
-                                new Mob("SRU_KrugMini11.1.7"),
-                                new Mob("SRU_KrugMini11.1.8"),
-                                new Mob("SRU_KrugMini11.1.9")
+                                new Mob("SRU_KrugMiniMini11.1.5"),
+                                new Mob("SRU_KrugMiniMini11.1.6"),
+                                new Mob("SRU_KrugMiniMini11.1.7"),
+                                new Mob("SRU_KrugMiniMini11.1.8"),
+                                new Mob("SRU_KrugMiniMini11.1.9"),
+                                new Mob("SRU_KrugMiniMini11.1.10")
                             }), 
                         Utility.Map.MapType.SummonersRift, 
                         GameObjectTeam.Chaos,
                         Color.White, new Timers(new Vector2(0,0),new Vector2(0,0))),
                     //Chaos: Gromp
                     new Camp("Gromp",
-                        115, 100, new Vector3(12703f, 6444f, 52f),
+                        110, 150, new Vector3(12703f, 6444f, 52f),
                         new List<Mob>(
                             new[] 
                             { 
@@ -219,7 +214,7 @@ namespace GodJungleTracker.Classes
                         Color.Orange, new Timers(new Vector2(0,0),new Vector2(0,0))),
                     //Neutral: RiftHerald
                     new Camp("RiftHerald",
-                        600, 300, new Vector3(5007f, 10471f, -71f),
+                        120, 300, new Vector3(5007f, 10471f, -71f),
                         new List<Mob>(
                             new[]
                             {
@@ -230,7 +225,7 @@ namespace GodJungleTracker.Classes
                         Color.DarkOrchid, new Timers(new Vector2(0,0),new Vector2(0,0)), true,  8),
                     //Neutral: Baron
                     new Camp("Baron",
-                        1200, 420, new Vector3(5007f, 10471f, -71f),
+                        120, 420, new Vector3(5007f, 10471f, -71f),
                         new List<Mob>(
                             new[] 
                             {
@@ -499,4 +494,3 @@ namespace GodJungleTracker.Classes
         }
     }
 }
-
