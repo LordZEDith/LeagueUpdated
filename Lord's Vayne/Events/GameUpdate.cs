@@ -21,7 +21,7 @@ namespace Lord_s_Vayne.Events
 
             if (Program.menu.Item("aaqaa").GetValue<KeyBind>().Active)
             {
-                MyOrbwalker.Orbwalk(TargetSelector.GetTarget(625, TargetSelector.DamageType.Physical), Game.CursorPos);
+                SebbyLib.Orbwalking.Orbwalk(TargetSelector.GetTarget(625, TargetSelector.DamageType.Physical), Game.CursorPos);
 
             }
 
@@ -95,6 +95,11 @@ namespace Lord_s_Vayne.Events
                     case 11:
                         {
                             Condemn.PRADALEAGACY.Run();
+                        }
+                        break;
+                    case 12:
+                        {
+                            //Condemn.Lords2.Run();
                         }
                         break;
                 }

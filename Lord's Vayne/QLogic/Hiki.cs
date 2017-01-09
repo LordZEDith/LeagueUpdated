@@ -13,7 +13,7 @@ namespace Lord_s_Vayne.QLogic
         public static void SafePositionQ(Obj_AI_Hero enemy)
         {
             var range = Orbwalking.GetRealAutoAttackRange(enemy);
-            var path = LeagueSharp.Common.Geometry.CircleCircleIntersection(ObjectManager.Player.ServerPosition.To2D(),
+            var path = Geometry.CircleCircleIntersection(ObjectManager.Player.ServerPosition.To2D(),
                 Prediction.GetPrediction(enemy, 0.25f).UnitPosition.To2D(), Program.Q.Range, range);
 
             if (path.Count() > 0)

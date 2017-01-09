@@ -43,13 +43,13 @@ namespace Lord_s_Vayne.Events
                 }
 
                 if (countMinions >= 2 && useQ && Program.Q.IsReady() && Minions != null) Program.Q.Cast(Program.Player.Position.Extend(Game.CursorPos, Program.Q.Range / 2));
-                if (useQ && Program.Q.IsReady() && MyOrbwalker.InAutoAttackRange(mob) && mob != null && Program.qmenu.Item("FastQ").GetValue<bool>())
+                if (useQ && Program.Q.IsReady() && SebbyLib.Orbwalking.InAutoAttackRange(mob) && mob != null && Program.qmenu.Item("FastQ").GetValue<bool>())
                 {
                     Program.Q.Cast(Game.CursorPos);
                     Game.SendEmote(Emote.Dance);
 
                 }
-                else if (useQ && Program.Q.IsReady() && MyOrbwalker.InAutoAttackRange(mob) && mob != null && !Program.qmenu.Item("FastQ").GetValue<bool>())
+                else if (useQ && Program.Q.IsReady() && SebbyLib.Orbwalking.InAutoAttackRange(mob) && mob != null && !Program.qmenu.Item("FastQ").GetValue<bool>())
                 {
                     Program.Q.Cast(Game.CursorPos);
 
@@ -71,7 +71,7 @@ namespace Lord_s_Vayne.Events
 
                 }
 
-                MyOrbwalker.Orbwalk(TargetSelector.GetTarget(625, TargetSelector.DamageType.Physical), Game.CursorPos);
+                SebbyLib.Orbwalking.Orbwalk(TargetSelector.GetTarget(625, TargetSelector.DamageType.Physical), Game.CursorPos);
             }
 
             // Condemn.FlashE();
@@ -197,6 +197,10 @@ namespace Lord_s_Vayne.Events
                     {
                         QLogic.Hiki.SafePositionQ(htarget);
                         Game.SendEmote(Emote.Dance);
+                    }
+                    if (value == 8)
+                    {
+                      
                     }
                 }
              }

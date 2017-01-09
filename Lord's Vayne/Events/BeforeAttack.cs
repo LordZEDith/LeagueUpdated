@@ -9,7 +9,7 @@ namespace Lord_s_Vayne.Events
 {
     class BeforeAttack
     {
-        public static void Orbwalking_BeforeAttack(MyOrbwalker.BeforeAttackEventArgs args)
+        public static void Orbwalking_BeforeAttack(SebbyLib.Orbwalking.BeforeAttackEventArgs args)
         {
             if (args.Unit.IsMe)
             {

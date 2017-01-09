@@ -82,6 +82,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Condemn\LordsUtils\HeroExtension.cs" />
+    <Compile Include="Condemn\LordsUtils\SafePostion.cs" />
     <Compile Include="Misc\CheckTarget.cs" />
     <Compile Include="Condemn\Flowers.cs" />
     <Compile Include="Condemn\Gosu.cs" />
@@ -114,7 +116,16 @@
     <Compile Include="QLogic\Burst.cs" />
     <Compile Include="QLogic\Gosu.cs" />
     <Compile Include="QLogic\Hiki.cs" />
+    <Compile Include="QLogic\Lords.cs" />
+    <Compile Include="QLogic\Prada.cs" />
     <Compile Include="QLogic\QLogic.cs" />
+    <Compile Include="QLogic\VHR.cs" />
+    <Compile Include="SebbyLib\Cache.cs" />
+    <Compile Include="SebbyLib\HealthPrediction.cs" />
+    <Compile Include="SebbyLib\Movement.cs" />
+    <Compile Include="SebbyLib\OktwCommon.cs" />
+    <Compile Include="SebbyLib\Orbwalking.cs" />
+    <Compile Include="SebbyLib\PredictionOktw.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -23,7 +23,7 @@ namespace Lord_s_Vayne
         public static Vector3 TumblePosition = Vector3.Zero;
 
 
-        public static MyOrbwalker.Orbwalker orbwalker;
+        public static SebbyLib.Orbwalking.Orbwalker orbwalker;
 
         private static string News = "Added New Q Logic's: Gosu, Side, Cursor, SmartQ, SafeQ, AggroQ, Burst, Hiki"; 
 
@@ -92,7 +92,7 @@ namespace Lord_s_Vayne
                 Program.menu = new Menu("Lord's Vayne", "Lord's Vayne", true);
             
                 Program.menu.AddSubMenu(new Menu("Orbwalker", "Orbwalker"));
-                Program.orbwalker = new MyOrbwalker.Orbwalker(Program.menu.SubMenu("Orbwalker"));
+                Program.orbwalker = new SebbyLib.Orbwalking.Orbwalker(Program.menu.SubMenu("Orbwalker"));
              
                 var TargetSelectorMenu = new Menu("Target Selector", "Target Selector");
                 TargetSelector.AddToMenu(TargetSelectorMenu);
@@ -105,7 +105,17 @@ namespace Lord_s_Vayne
                 Program.qmenu = Program.menu.AddSubMenu(new Menu("Tumble", "Tumble"));
                 Program.qmenu.AddItem(new MenuItem("FastQ", "Fast Q").SetValue(true).SetValue(true).SetTooltip("Q Animation Cancelation"));
                 Program.qmenu.AddItem(new MenuItem("UseQC", "Use Q Combo").SetValue(true));
-                Program.qmenu.AddItem(new MenuItem("QMode", "Use Q Mode:", true).SetValue(new StringList(new[] { "Gosu", "Side", "Cursor", "SmartQ", "SafeQ", "AggroQ", "Burst", "Hiki" })));
+                Program.qmenu.AddItem(new MenuItem("QMode", "Use Q Mode:", true).SetValue(new StringList(new[] { "Gosu", "Side", "Cursor", "SmartQ", "SafeQ", "AggroQ", "Burst", "Hiki"})));
+            /*if (Program.qmenu.Item("QMode", true).GetValue<StringList>().SelectedIndex == 8)
+            {
+                Program.qmenu.AddItem(new MenuItem("QOrderBy", "Q to position").SetValue(new StringList(new[] { "CLOSETOMOUSE", "CLOSETOTARGET" })));
+            }*/
+            if (Program.qmenu.Item("QMode", true).GetValue<StringList>().SelectedIndex == 8)
+            {
+                Program.qmenu.AddItem(new MenuItem("smartq", "Use Smart Q").SetValue(true));
+                Program.qmenu.AddItem(new MenuItem("qspam", "Ignore Checks AKA Spam Q").SetValue(true));
+                
+            }
                 Program.qmenu.AddItem(new MenuItem("hq", "Use Q Harass").SetValue(true));
                 Program.qmenu.AddItem(new MenuItem("restrictq", "Restrict Q usage?").SetValue(true));
                 Program.qmenu.AddItem(new MenuItem("UseQJ", "Use Q Farm").SetValue(true));                           
@@ -170,8 +180,8 @@ namespace Lord_s_Vayne
                 E.SetTargetted(0.25f, 2200f);
                 Obj_AI_Base.OnProcessSpellCast += Events.Game_SpellProcess.Game_ProcessSpell;
                 Game.OnUpdate += Events.GameUpdate.Game_OnGameUpdate;
-                MyOrbwalker.AfterAttack += Events.AfterAttack.Orbwalking_AfterAttack;
-                MyOrbwalker.BeforeAttack += Events.BeforeAttack.Orbwalking_BeforeAttack;
+                SebbyLib.Orbwalking.AfterAttack += Events.AfterAttack.Orbwalking_AfterAttack;
+                SebbyLib.Orbwalking.BeforeAttack += Events.BeforeAttack.Orbwalking_BeforeAttack;
                 AntiGapcloser.OnEnemyGapcloser += Events.AntiGapCloser.AntiGapcloser_OnEnemyGapcloser;
                 Interrupter2.OnInterruptableTarget += Events.Interrupter.Interrupter2_OnInterruptableTarget;
                 Obj_AI_Base.OnPlayAnimation += Events.Play.OnPlay;
@@ -188,7 +198,9 @@ namespace Lord_s_Vayne
                 //  "<font color='#f2f21d'>Buy me cigars </font> <font color='#ff1900'>ssssssssssmith@hotmail.com</font> (10) S");
                 Program.menu.AddToMainMenu();
             }
-        }
+
+        
+    }
         #endregion
     }
 
