@@ -25,7 +25,7 @@ namespace Lord_s_Vayne
 
         public static SebbyLib.Orbwalking.Orbwalker orbwalker;
 
-        private static string News = "Added New Q Logic's: Gosu, Side, Cursor, SmartQ, SafeQ, AggroQ, Burst, Hiki"; 
+        private static string News = "Added Flash Condemn and Flash Condemn Percent Hp as well as Q animation Cancel on manual cast, Fixed Focus 2 W stacks"; 
 
         public static Menu menu;
 
@@ -104,6 +104,7 @@ namespace Lord_s_Vayne
 
                 Program.qmenu = Program.menu.AddSubMenu(new Menu("Tumble", "Tumble"));
                 Program.qmenu.AddItem(new MenuItem("FastQ", "Fast Q").SetValue(true).SetValue(true).SetTooltip("Q Animation Cancelation"));
+                Program.qmenu.AddItem(new MenuItem("FastQs", "Cancel Q on Manual Click").SetValue(true).SetValue(true).SetTooltip("Cancel Your Q when you manually cast it(Need to have \"Fast Q\" on too)")).Permashow(true, "Vayne | Vayne Manul Cancel", Color.Aqua); 
                 Program.qmenu.AddItem(new MenuItem("UseQC", "Use Q Combo").SetValue(true));
                 Program.qmenu.AddItem(new MenuItem("QMode", "Use Q Mode:", true).SetValue(new StringList(new[] { "Gosu", "Side", "Cursor", "SmartQ", "SafeQ", "AggroQ", "Burst", "Hiki"})));
             /*if (Program.qmenu.Item("QMode", true).GetValue<StringList>().SelectedIndex == 8)
@@ -128,6 +129,9 @@ namespace Lord_s_Vayne
                 Program.emenu = Program.menu.AddSubMenu(new Menu("Condemn", "Condemn"));
                 Program.emenu.AddItem(new MenuItem("UseEC", "Use E Combo").SetValue(true));
                 Program.emenu.AddItem(new MenuItem("he", "Use E Harass").SetValue(true));
+                Program.emenu.AddItem(new MenuItem("UseCF", "Use Flash Condemn").SetValue(new KeyBind("U".ToCharArray()[0], KeyBindType.Press)));
+                Program.emenu.AddItem(new MenuItem("UseCFA", "Use Flash Condemn (Toggle)").SetValue(new KeyBind("O".ToCharArray()[0], KeyBindType.Toggle)).SetTooltip("Auto Flash Condemn when you have % HP")).Permashow(true, "Vayne | Auto Flash Condemn", Color.Aqua);
+                Program.emenu.AddItem(new MenuItem("UseCFHP", "Use Flash Condemn if % HP").SetValue(new Slider(25))); 
                 Program.emenu.AddItem(new MenuItem("UseET", "Use E (Toggle)").SetValue(new KeyBind("T".ToCharArray()[0], KeyBindType.Toggle)));
                 Program.emenu.AddItem(new MenuItem("zzrot", "[Beta] ZZrot Condemn").SetValue(new KeyBind("I".ToCharArray()[0], KeyBindType.Toggle))).Permashow(true, "Vayne | ZZRot Toggle", Color.Aqua);
                 // emenu.AddItem(new MenuItem("FlashE", "Flash E").SetValue(true).SetValue(new KeyBind("Y".ToCharArray()[0], KeyBindType.Press)));
@@ -141,7 +145,7 @@ namespace Lord_s_Vayne
                 Program.emenu.AddItem(new MenuItem("UseEaa", "Use E after auto").SetValue(new KeyBind("M".ToCharArray()[0], KeyBindType.Press)));
 
 
-            Program.rmenu = Program.menu.AddSubMenu(new Menu("Ult", "Ult"));
+                Program.rmenu = Program.menu.AddSubMenu(new Menu("Ult", "Ult"));
                 Program.rmenu.AddItem(new MenuItem("visibleR", "Smart Invisible R").SetValue(true).SetTooltip("Wether you want to set a delay to stay in R before you Q"));
                 Program.rmenu.AddItem(new MenuItem("Qtime", "Duration to wait").SetValue(new Slider(700, 0, 1000)));
 
@@ -179,12 +183,12 @@ namespace Lord_s_Vayne
 
                 E.SetTargetted(0.25f, 2200f);
                 Obj_AI_Base.OnProcessSpellCast += Events.Game_SpellProcess.Game_ProcessSpell;
+                Obj_AI_Base.OnProcessSpellCast += Events.OnSpellProcess.Obj_AI_Base_OnProcessSpellCast;
                 Game.OnUpdate += Events.GameUpdate.Game_OnGameUpdate;
                 SebbyLib.Orbwalking.AfterAttack += Events.AfterAttack.Orbwalking_AfterAttack;
                 SebbyLib.Orbwalking.BeforeAttack += Events.BeforeAttack.Orbwalking_BeforeAttack;
                 AntiGapcloser.OnEnemyGapcloser += Events.AntiGapCloser.AntiGapcloser_OnEnemyGapcloser;
-                Interrupter2.OnInterruptableTarget += Events.Interrupter.Interrupter2_OnInterruptableTarget;
-                Obj_AI_Base.OnPlayAnimation += Events.Play.OnPlay;
+                Interrupter2.OnInterruptableTarget += Events.Interrupter.Interrupter2_OnInterruptableTarget;               
                 GameObject.OnCreate += Events.OnCreates.OnCreate;
                 //  Drawing.OnDraw += DrawingOnOnDraw;
 

@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Condemn\LordsUtils\HeroExtension.cs" />
     <Compile Include="Condemn\LordsUtils\SafePostion.cs" />
+    <Compile Include="Events\OnSpellProcess.cs" />
     <Compile Include="Misc\CheckTarget.cs" />
     <Compile Include="Condemn\Flowers.cs" />
     <Compile Include="Condemn\Gosu.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Condemn\Sharpshooter.cs" />
     <Compile Include="Condemn\Shine.cs" />
     <Compile Include="Condemn\VHR.cs" />
+    <Compile Include="Misc\CondemnFlash.cs" />
     <Compile Include="Misc\Distance.cs" />
     <Compile Include="Events\AfterAttack.cs" />
     <Compile Include="Events\BeforeAttack.cs" />
@@ -110,7 +112,6 @@
     <Compile Include="Events\Game_SpellProcess .cs" />
     <Compile Include="Events\Interrupter.cs" />
     <Compile Include="Events\OnCreates.cs" />
-    <Compile Include="Events\Play.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="QLogic\Burst.cs" />

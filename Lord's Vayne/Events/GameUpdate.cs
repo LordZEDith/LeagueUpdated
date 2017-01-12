@@ -9,7 +9,7 @@ namespace Lord_s_Vayne.Events
 {
     class GameUpdate
     {
-       
+        public static Obj_AI_Hero Player { get { return ObjectManager.Player; } }
         public static void Game_OnGameUpdate(EventArgs args)
         {
             if (Program.menu.Item("useR").GetValue<bool>() && Program.R.IsReady()
@@ -22,11 +22,16 @@ namespace Lord_s_Vayne.Events
             if (Program.menu.Item("aaqaa").GetValue<KeyBind>().Active)
             {
                 SebbyLib.Orbwalking.Orbwalk(TargetSelector.GetTarget(625, TargetSelector.DamageType.Physical), Game.CursorPos);
-
             }
-
-           
-
+            
+            if (Program.emenu.Item("UseCF").GetValue<KeyBind>().Active && Program.E.IsReady())
+            {
+                Misc.CondemnFlash.CondemnFlashs();
+            }
+            if (Program.emenu.Item("UseCFA").GetValue<KeyBind>().Active && Program.E.IsReady() && Player.HealthPercent < Program.emenu.Item("UseCFHP").GetValue<Slider>().Value)
+            {
+                Misc.CondemnFlash.CondemnFlashs();
+            }
             //||
             //(orbwalker.ActiveMode.ToString() != "Combo" || !menu.Item("UseEC").GetValue<bool>()) &&
             //!menu.Item("UseET").GetValue<KeyBind>().Active)) return;
