@@ -104,7 +104,8 @@ namespace Lord_s_Vayne.Events
                         break;
                     case 12:
                         {
-                            //Condemn.Lords2.Run();
+                            Condemn.Lords.Run();
+                            Condemn.Flowers.Run();
                         }
                         break;
                 }
