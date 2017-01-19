@@ -29,7 +29,7 @@ namespace hi_im_gosu_Reborn
 
         public static SebbyLib.Orbwalking.Orbwalker orbwalker;
 
-        private static string News = "Added New Custom Orbwalker for better cs'ing and movement";
+        private static string News = "Added ImSoSharp's New Custom Orbwalker for better cs'ing and movement";
 
         public static Menu menu;
 
